@@ -1,7 +1,11 @@
-# Phaser 3 Webpack Project Template
+# Dating Nightmare
 
-A Phaser 3 Project Template
+Mrs. Penthouse Kissingtons dating service
 
-## How to run:
+## How to build:
 
 `npm run build`
+
+## How to develop:
+
+`npm run start`
