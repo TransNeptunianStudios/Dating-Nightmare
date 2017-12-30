@@ -1,19 +1,23 @@
-import 'phaser';
+/*
+ * Game entry point.
+ *
+ */
+
+import Splash from './scenes/splash.js'
+import Game from './scenes/game.js'
 
 var config = {
     type: Phaser.AUTO,
     parent: 'phaser-example',
     width: 800,
     height: 600,
-    scene: {
-        preload: preload,
-        create: create
-    }
+    scene: [ Splash, Game ]
 };
 
 var game = new Phaser.Game(config);
 
-function preload ()
+/*
+function preload () 
 {
     this.load.image('logo', 'assets/logo.png');
 }
@@ -30,5 +34,5 @@ function create ()
         yoyo: true,
         loop: -1
     });
-
 }
+*/

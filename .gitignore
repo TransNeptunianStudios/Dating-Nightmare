@@ -11,6 +11,7 @@ node_modules/
 
 # Build
 build/
+dist/
 /npm-debug.log
 
 # I have no idea what these are for
