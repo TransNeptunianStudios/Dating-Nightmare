@@ -5,32 +5,35 @@
 
 export default class Splash extends Phaser.Scene {
 
-   constructor() {
-   
-      super({ key: 'Splash' });
-   
-   }
+    constructor() {
+	super({ key: 'Splash' });
+    }
 
-   preload() {
-      
-      this.load.image('logo', 'assets/logo.png');
-   
-   }
+    preload() {
+	this.load.image('logo', 'assets/images/TNSLogo.png');
+    }
 
-   create() {
+    create() {
+	var logo = this.add.image(400, 300, 'logo')
+	logo.alpha = 0
 
-      var logo = this.add.image(400, 150, 'logo');
+	this.tweens.add({
+            targets: logo,
+            alpha: 1,
+            duration: 3000,
+            ease: 'Power2',
+            yoyo: true,
+	    onComplete: this.endScene,
+	    callbackScope: this,
+	    completeDelay: 2000
+	})
 
-      this.tweens.add({
-         targets: logo,
-         y: 450,
-         duration: 2000,
-         ease: 'Power2',
-         yoyo: true,
-      });
+	// TODO: Add option to click the splash away
 
-      this.scene.launch('Game');
-
-   }
+	console.log('Splash created');
+    }
+    endScene() {
+	this.scene.launch('Game')
+    }
 
 };
