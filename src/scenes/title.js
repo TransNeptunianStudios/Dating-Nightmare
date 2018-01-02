@@ -1,24 +1,27 @@
 /*
- * Scene for the initial splash screen.
+ * Scene for the title
  *
  */
 
-export default class Splash extends Phaser.Scene {
+export default class Title extends Phaser.Scene {
 
     constructor() {
-	super({ key: 'Splash' });
+	super({ key: 'Title'});
     }
 
     preload() {
-	this.load.image('logo', 'assets/images/TNSLogo.png');
+	this.load.image('title', 'assets/images/title-mock.png');
     }
 
     create() {
-	var logo = this.add.image(400, 200, 'logo')
-	logo.alpha = 0
+	var mock = this.add.image(0, 0, 'title')
+	mock.scaleX = 800 / mock.width
+	mock.scaleY = 480 / mock.height
+	mock.setOrigin(0, 0)
+	mock.alpha = 0
 
 	this.tweens.add({
-            targets: logo,
+            targets: mock,
             alpha: 1,
             duration: 3000,
             ease: 'Power2',
@@ -33,10 +36,10 @@ export default class Splash extends Phaser.Scene {
 			     0,
 			     this);
 
-	console.log('Splash created');
+	console.log('Title created');
     }
     endScene() {
-	this.scene.start('Intro')
+	this.scene.start('Prologue')
     }
 
 };
