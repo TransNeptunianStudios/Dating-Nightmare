@@ -12,28 +12,9 @@ var config = {
     width: 800,
     height: 600,
     pixelArt: true,
+    title: 'Dating Nightmare',
+    version: '1.0-alpha',
     scene: [ Splash, Game ]
 };
 
 var game = new Phaser.Game(config);
-
-/*
-function preload ()
-{
-    this.load.image('logo', 'assets/logo.png');
-}
-
-function create ()
-{
-    var logo = this.add.image(400, 150, 'logo');
-
-    this.tweens.add({
-        targets: logo,
-        y: 450,
-        duration: 2000,
-        ease: 'Power2',
-        yoyo: true,
-        loop: -1
-    });
-}
-*/
