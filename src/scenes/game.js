@@ -9,6 +9,10 @@ export default class Game extends Phaser.Scene {
       super({ key: 'Game' });
    }
 
+    preload() {
+	console.log('Game preloaded');
+    }
+
    create() {
       console.log('Game created');
    }

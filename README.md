@@ -2,10 +2,10 @@
 
 Mrs. Penthouse Kissingtons dating service
 
-## How to build:
+## How to build and run dev mode on http://localhost:3000 with borwsersync :
 
-`npm run build`
+`npm run dev`
 
 ## How to develop:
 
-`npm run start`
+`npm run deploy`
