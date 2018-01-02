@@ -28,12 +28,15 @@ export default class Splash extends Phaser.Scene {
 	    completeDelay: 2000
 	})
 
-	// TODO: Add option to click the splash away
+	this.input.events.on('POINTER_DOWN_EVENT',
+			     this.endScene,
+			     0,
+			     this);
 
 	console.log('Splash created');
     }
     endScene() {
-	this.scene.launch('Game')
+	this.scene.start('Game')
     }
 
 };
