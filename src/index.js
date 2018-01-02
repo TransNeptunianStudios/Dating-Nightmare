@@ -11,13 +11,14 @@ var config = {
     parent: 'phaser-example',
     width: 800,
     height: 600,
+    pixelArt: true,
     scene: [ Splash, Game ]
 };
 
 var game = new Phaser.Game(config);
 
 /*
-function preload () 
+function preload ()
 {
     this.load.image('logo', 'assets/logo.png');
 }
