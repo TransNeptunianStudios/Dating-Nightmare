@@ -39,7 +39,7 @@ export default class Client extends Phaser.Scene {
 	console.log('Client created');
     }
     endScene() {
-	this.scene.start('Desk')
+	this.scene.launch('Desk')
     }
 
 };

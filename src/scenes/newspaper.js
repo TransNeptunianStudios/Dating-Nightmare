@@ -1,20 +1,20 @@
 /*
- * Scene for the introduction of the game before title
+ * Scene for the prologue of the game
  *
  */
 
-export default class Intro extends Phaser.Scene {
+export default class NewsPaper extends Phaser.Scene {
 
     constructor() {
-	super({ key: 'Intro' });
+	super({ key: 'NewsPaper' });
     }
 
     preload() {
-	this.load.image('intro-mock', 'assets/images/intro-mock.png');
+	this.load.image('prologue-mock', 'assets/images/prologue-mock.png');
     }
 
     create() {
-	var mock = this.add.image(0, 0, 'intro-mock')
+	var mock = this.add.image(0, 0, 'prologue-mock')
 	mock.scaleX = 800 / mock.width
 	mock.scaleY = 480 / mock.height
 	mock.setOrigin(0, 0)
@@ -36,10 +36,10 @@ export default class Intro extends Phaser.Scene {
 			     0,
 			     this);
 
-	console.log('Intro created');
+	console.log('Prologue created');
     }
     endScene() {
-	this.scene.start('Title')
+	this.scene.start('Client')
     }
 
 };

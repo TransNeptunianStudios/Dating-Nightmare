@@ -4,9 +4,9 @@
  */
 
 import Splash from './scenes/splash.js'
-import Intro from './scenes/intro.js'
+import Skyline from './scenes/skyline.js'
 import Title from './scenes/title.js'
-import Prologue from './scenes/prologue.js'
+import NewsPaper from './scenes/newspaper.js'
 import Client from './scenes/client.js'
 import Desk from './scenes/desk.js'
 
@@ -17,7 +17,7 @@ var config = {
     pixelArt: true,
     title: 'Dating Nightmare',
     version: '1.0-alpha',
-    scene: [ Splash, Intro, Title, Prologue, Client, Desk ]
+    scene: [ Splash, Skyline, Title, NewsPaper, Client, Desk ]
 };
 
 var game = new Phaser.Game(config);

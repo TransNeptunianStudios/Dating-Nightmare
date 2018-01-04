@@ -1,20 +1,20 @@
 /*
- * Scene for the prologue of the game
+ * Scene for the introduction of the game before title
  *
  */
 
-export default class Prologue extends Phaser.Scene {
+export default class Skyline extends Phaser.Scene {
 
     constructor() {
-	super({ key: 'Prologue' });
+	super({ key: 'Skyline' });
     }
 
     preload() {
-	this.load.image('prologue-mock', 'assets/images/prologue-mock.png');
+	this.load.image('intro-mock', 'assets/images/intro-mock.png');
     }
 
     create() {
-	var mock = this.add.image(0, 0, 'prologue-mock')
+	var mock = this.add.image(0, 0, 'intro-mock')
 	mock.scaleX = 800 / mock.width
 	mock.scaleY = 480 / mock.height
 	mock.setOrigin(0, 0)
@@ -36,10 +36,10 @@ export default class Prologue extends Phaser.Scene {
 			     0,
 			     this);
 
-	console.log('Prologue created');
+	console.log('Intro created');
     }
     endScene() {
-	this.scene.start('Client')
+	this.scene.start('Title')
     }
 
 };

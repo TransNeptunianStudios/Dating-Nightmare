@@ -39,7 +39,7 @@ export default class Title extends Phaser.Scene {
 	console.log('Title created');
     }
     endScene() {
-	this.scene.start('Prologue')
+	this.scene.start('NewsPaper')
     }
 
 };
