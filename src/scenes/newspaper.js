@@ -1,3 +1,5 @@
+/* global Phaser */
+
 /*
  * Scene for the prologue of the game
  *

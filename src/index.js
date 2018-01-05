@@ -1,3 +1,5 @@
+/* global Phaser */
+
 /*
  * Game entry point.
  *
@@ -20,4 +22,4 @@ var config = {
   scene: [ Splash, Skyline, Title, NewsPaper, Client, Desk ]
 }
 
-var game = new Phaser.Game(config)
+this.game = new Phaser.Game(config)

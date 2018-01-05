@@ -1,3 +1,5 @@
+/* global Phaser */
+
 /*
  * Scene for the initial splash screen.
  *
@@ -23,7 +25,7 @@ export default class Splash extends Phaser.Scene {
       centerX,
       centerY,
       'tns_logo',
-      'nept_logo_stars').setAlpha(0.0);
+      'nept_logo_stars').setAlpha(0.0)
 
     this.star1 = this.add.image(
       centerX + 67,

@@ -1,3 +1,5 @@
+/* global Phaser */
+
 /*
  * Scene for the title
  *
@@ -5,7 +7,7 @@
 
 export default class Title extends Phaser.Scene {
   constructor () {
-    super({ key: 'Title'})
+    super({ key: 'Title' })
   }
 
   preload () {
