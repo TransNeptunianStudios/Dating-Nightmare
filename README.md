@@ -8,7 +8,7 @@ Mrs. Penthouse Kissingtons dating service
 
 `npm install`
 
-## How to build and run dev mode on http://localhost:3000 with borwsersync :
+## How to build and run dev mode on http://localhost:3000 with browsersync :
 
 `npm run dev`
 
