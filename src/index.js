@@ -1,4 +1,5 @@
 /* global Phaser */
+/* unused-var game */
 
 /*
  * Game entry point.
@@ -22,4 +23,4 @@ var config = {
   scene: [ Splash, Skyline, Title, NewsPaper, Client, Desk ]
 }
 
-this.game = new Phaser.Game(config)
+var game = new Phaser.Game(config) // eslint-disable-line no-unused-vars
