@@ -19,11 +19,15 @@ export default class Desk extends Phaser.Scene {
     var desk = this.add.image(0, 0, 'desk')
     desk.setOrigin(0)
 
-    this.add.image(200, 200, 'arrow').setInteractive()
+    var centerX = this.game.config.width / 2
+
+    var scene = this.scene
+
+    this.add.image(centerX, 50, 'arrow').setInteractive()
 
     this.input.events.on('GAME_OBJECT_DOWN_EVENT', function (event) {
       console.log('CLICKED')
-      this.scene.swap('client')
+      scene.swap('Client')
     }, this)
 
     console.log('Game created')
