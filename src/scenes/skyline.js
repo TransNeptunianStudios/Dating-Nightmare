@@ -32,10 +32,7 @@ export default class Skyline extends Phaser.Scene {
       completeDelay: 2000
     })
 
-    this.input.events.on('POINTER_DOWN_EVENT',
-           this.endScene,
-           0,
-           this)
+    this.input.on('pointerdown', this.endScene, this);
 
     console.log('Intro created')
   }

@@ -66,11 +66,13 @@ export default class Splash extends Phaser.Scene {
     this.addFadeInStar(fadeInTimeline, this.star5, 1000)
     this.addFadeInLogo(fadeInTimeline)
 
-    this.input.events.on(
+    this.input.on(
       'POINTER_DOWN_EVENT',
       this.endScene,
       0,
       this)
+
+    this.input.on('pointerdown', this.endScene, this);
 
     fadeInTimeline.play()
   }
